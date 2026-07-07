@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+
+<!--
+  ============================================================
+  EDIT ME FIRST — quick customization guide
+  ============================================================
+  1. Open script.js and fill in the CONFIG object at the top:
+     your name, her name, the date you got together, and your
+     letter.
+  2. Search for "REASONS I LOVE YOU" below in this HTML file
+     and replace the list items with your own reasons.
+  3. Drop her photos into an /images folder next to this file
+     and reference them in the gallery section below
+     (see the comment there for details).
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="max-width:none; padding-top:0;">
+  <canvas id="petal-canvas"></canvas>
+  <div class="hero-eyebrow" id="fromLabel">from your someone</div>
+  <h1>for<span class="partner-name" id="partnerNameHero">you</span></h1>
+  <p class="hero-sub" id="heroSub">
+    a small corner of the internet, built just to remind you how loved you are.
+  </p>
+  <div class="scroll-cue">
+    <span>scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+  </div>
+</section>
+
+<!-- ================= REASONS ================= -->
+<section class="reasons">
+  <div class="section-head">
+    <span class="section-eyebrow">the reasons</span>
+    <h2>why i love you</h2>
+    <div class="divider"></div>
+  </div>
+
+  <!-- REASONS I LOVE YOU — replace these with your own -->
+  <div class="reasons-list" id="reasonsList">
+    <div class="reason">
+      <svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.716-4.35-9.428-8.06C.6 10.02 1.1 6.2 4.2 4.8c2.2-1 4.6-.2 5.8 1.6 1.2-1.8 3.6-2.6 5.8-1.6 3.1 1.4 3.6 5.2 1.6 8.14C18.716 16.65 12 21 12 21z"/></svg>
+      <p>The way you be yourself with me.</p>
+    </div>
+    <div class="reason">
+      <svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.716-4.35-9.428-8.06C.6 10.02 1.1 6.2 4.2 4.8c2.2-1 4.6-.2 5.8 1.6 1.2-1.8 3.6-2.6 5.8-1.6 3.1 1.4 3.6 5.2 1.6 8.14C18.716 16.65 12 21 12 21z"/></svg>
+      <p>How you reassure me even in the smallest doubts i have.</p>
+    </div>
+    <div class="reason">
+      <svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.716-4.35-9.428-8.06C.6 10.02 1.1 6.2 4.2 4.8c2.2-1 4.6-.2 5.8 1.6 1.2-1.8 3.6-2.6 5.8-1.6 3.1 1.4 3.6 5.2 1.6 8.14C18.716 16.65 12 21 12 21z"/></svg>
+      <p>The softness and affection you give me without asking for anything in return.</p>
+    </div>
+    <div class="reason">
+      <svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.716-4.35-9.428-8.06C.6 10.02 1.1 6.2 4.2 4.8c2.2-1 4.6-.2 5.8 1.6 1.2-1.8 3.6-2.6 5.8-1.6 3.1 1.4 3.6 5.2 1.6 8.14C18.716 16.65 12 21 12 21z"/></svg>
+      <p>That home, to me, isn't a place — it's just wherever you happen to be standing.</p>
+    </div>
+    <div class="reason">
+      <svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.716-4.35-9.428-8.06C.6 10.02 1.1 6.2 4.2 4.8c2.2-1 4.6-.2 5.8 1.6 1.2-1.8 3.6-2.6 5.8-1.6 3.1 1.4 3.6 5.2 1.6 8.14C18.716 16.65 12 21 12 21z"/></svg>
+      <p>Every ordinary day that you somehow make feel worth remembering.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery">
+  <div class="section-head">
+    <span class="section-eyebrow">for the memories</span>
+    <h2>our gallery</h2>
+    <div class="divider"></div>
+  </div>
+
+  <!--
+    PHOTOS — built in. To add or swap photos:
+    1. Drop the image file into the /images folder next to this file.
+    2. Add a line below: <div class="polaroid" data-src="images/yourfile.jpg"></div>
+    The tilt and lightbox are handled automatically by script.js.
+  -->
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="polaroid" data-src="images/photo-1.jpg"></div>
+    <div class="polaroid" data-src="images/photo-2.jpg"></div>
+    <div class="polaroid" data-src="images/photo-3.jpg"></div>
+    <div class="polaroid" data-src="images/photo-4.jpg"></div>
+    <div class="polaroid" data-src="images/photo-5.jpg"></div>
+    <div class="polaroid" data-src="images/photo-6.jpg"></div>
+    <div class="polaroid" data-src="images/photo-7.jpg"></div>
+    <div class="polaroid" data-src="images/photo-8.jpg"></div>
+    <div class="polaroid" data-src="images/photo-9.jpg"></div>
+  </div>
+</section>
+
+<!-- ================= LETTER ================= -->
+<section class="letter">
+  <div class="section-head">
+    <span class="section-eyebrow">a little something</span>
+    <h2>a letter, for you</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="letter-wrap">
+    <p class="letter-body" id="letterBody">I wanted a place on the internet that belonged only to us — no algorithm deciding what you see, no ads, just this. Every word here I mean completely. Thank you for being the softest, easiest thing to love in my whole life. I'd choose all of it again, every time, no matter how many times I got to choose.</p>
+    <span class="letter-sign" id="letterSign">— always yours</span>
+  </div>
+</section>
+
+<!-- ================= FINALE ================= -->
+<section class="finale">
+  <div class="counter" id="dayCounter">0</div>
+  <div class="counter-label">days of loving you, and counting</div>
+
+  <button class="heart-btn" id="heartBtn" aria-label="send a little love">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.716-4.35-9.428-8.06C.6 10.02 1.1 6.2 4.2 4.8c2.2-1 4.6-.2 5.8 1.6 1.2-1.8 3.6-2.6 5.8-1.6 3.1 1.4 3.6 5.2 1.6 8.14C18.716 16.65 12 21 12 21z"/></svg>
+  </button>
+  <p class="finale-note">(go on, click it)</p>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="close">✕</button>
+  <img id="lightboxImg" src="" alt="memory">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
